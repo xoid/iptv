@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>
+        IPTV
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script>
+        function play_url(url)
+        {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'play?url=' + url);
+            xhr.send();
+            console.log('xhr send ' + url);
+            return false;
+        }
+    </script>
+    <style>
+             .channel {border-radius: 10px; background-color: #eeeecc; margin: 10px; }
+    </style>
+</head>
+<body>
+
+<a href=/stop> STOP </a> &nbsp; <a href=/restart> restart </a> &nbsp; <a href="http://arm:9091"> torrent </a> &nbsp; <a href="video.html"> Video </a> &nbsp; Now playing: {{nowplayingurl}}
+<p>
+
